@@ -1,0 +1,19 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "args": [ "help" ],
+      "env": {},
+      "interpreter": "(default)",
+      "interpreterArguments": "",
+      "name": "manage.py",
+      "nativeDebug": false,
+      "project": "manage.py",
+      "projectTarget": "",
+      "scriptArguments": "",
+      "type": "python",
+      "webBrowserUrl": ""
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,8 +77,8 @@
                                 {{ current_user.username }} <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ url_for('admin.submitArticles') }}">发表博文</a></li>
-                                <li><a href="{{ url_for('admin.account') }}">管理博客</a></li>
+                                <li><a href="{{ url_for('admin.submitArticles') }}">分享案例</a></li>
+                                <li><a href="{{ url_for('admin.account') }}">管理案例</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}">退出登陆</a></li>
                             </ul>
                         </li>
@@ -113,10 +113,10 @@
                                     </div>
                                 {% else %}
                                     <div class="entry-box">
-                                        <h5><strong>博客统计</strong></h5>
+                                        <h5><strong>案例统计</strong></h5>
                                         <p>访问量：<span class="badge">{{ BlogView.query.first().num_of_view }}</span></p>
                                         <p>
-                                            博文总数：<span class="badge">{{ Article.query.count() }}</span>
+                                            案例总数：<span class="badge">{{ Article.query.count() }}</span>
                                             评论总数：<span class="badge">{{ Comment.query.count() }}</span>
                                         </p>
                                         <p>
@@ -137,9 +137,9 @@
 {% endblock %}
 <div class="footer">
     <p class="footer-content">
-        @2016
-        <a href="#">Blog_mini</a>
-        -开源博客系统
+        @2021
+        <a href="#">内江移动全业务</a>
+        -案例分享系统
         {% if not current_user.is_authenticated %}
             -<a href="{{ url_for('auth.login') }}">
             <span class="glyphicon glyphicon-wrench">后台管理</span>
