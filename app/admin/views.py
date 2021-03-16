@@ -49,11 +49,11 @@ def submitArticles():
                               source=source, articleType=articleType)
             db.session.add(article)
             db.session.commit()
-            flash(u'发表博文成功！', 'success')
+            flash(u'发表案例成功！', 'success')
             article_id = Article.query.filter_by(title=title).first().id
             return redirect(url_for('main.articleDetails', id=article_id))
     if form.errors:
-        flash(u'发表博文失败', 'danger')
+        flash(u'发表案例失败', 'danger')
 
     return render_template('admin/submit_articles.html', form=form)
 
@@ -81,7 +81,7 @@ def editArticles(id):
         article.update_time = datetime.utcnow()
         db.session.add(article)
         db.session.commit()
-        flash(u'博文更新成功！', 'success')
+        flash(u'案例更新成功！', 'success')
         return redirect(url_for('main.articleDetails', id=article.id))
     form.source.data = article.source_id
     form.title.data = article.title
@@ -169,7 +169,7 @@ def delete_article():
             db.session.rollback()
             flash(u'删除失败！', 'danger')
         else:
-            flash(u'成功删除博文和%s条评论！' % count, 'success')
+            flash(u'成功删除案例和%s条评论！' % count, 'success')
     if form.errors:
         flash(u'删除失败！', 'danger')
 
@@ -204,7 +204,7 @@ def delete_articles():
             db.session.rollback()
             flash(u'删除失败！', 'danger')
         else:
-            flash(u'成功删除%s篇博文和%s条评论！' % (len(articleIds), count), 'success')
+            flash(u'成功删除%s篇案例和%s条评论！' % (len(articleIds), count), 'success')
     if form.errors:
         flash(u'删除失败！', 'danger')
 
@@ -481,7 +481,7 @@ def delete_articleType(id):
         db.session.rollback()
         flash(u'删除分类失败！', 'danger')
     else:
-        flash(u'删除分类成功！同时将原来该分类的%s篇博文添加到<未分类>。' % count, 'success')
+        flash(u'删除分类成功！同时将原来该分类的%s篇案例添加到<未分类>。' % count, 'success')
     return redirect(url_for('admin.manage_articleTypes', page=page))
 
 
@@ -650,7 +650,7 @@ def custom_blog_info():
         db.session.add(blog)
         db.session.commit()
 
-        flash(u'修改博客基本信息成功！', 'success')
+        flash(u'修改用户基本信息成功！', 'success')
         return redirect(url_for('admin.custom_blog_info'))
 
     return render_template('admin/custom_blog_info.html', form=form)

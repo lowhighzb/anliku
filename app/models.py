@@ -370,7 +370,7 @@ class Plugin(db.Model):
 
     @staticmethod
     def insert_system_plugin():
-        plugin = Plugin(title=u'博客统计',
+        plugin = Plugin(title=u'案例统计',
                         note=u'系统插件',
                         content='system_plugin',
 			order=1)

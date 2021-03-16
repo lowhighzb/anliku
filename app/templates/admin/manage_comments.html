@@ -2,12 +2,12 @@
 {% import "_macros.html" as macros %}
 
 {% block title %}
-    Blog_mini -博文评论
+    全业务案例分享新系统 -案例评论
 {% endblock %}
 
 {% block admin_content %}
 <div class="entry-box manage-comments">
-    <h4><strong>博文评论</strong></h4>
+    <h4><strong>案例评论</strong></h4>
     <hr/>
     <p><span class="glyphicon glyphicon-comment"></span>评论总数：<span class="badge">{{ Comment.query.count() }}</span></p>
     <div class="handle-box-admin">
@@ -83,7 +83,7 @@
                     {% if comment.disabled == True %}
                         <p class="disabled-comment-admin-info">
                             <span class="glyphicon glyphicon-remove-sign"></span>
-                            <i>该评论已在博文页面中屏蔽！</i>
+                            <i>该评论已在案例页面中屏蔽！</i>
                         </p>
                     {% endif %}
                 </div>

@@ -6,23 +6,23 @@
     <div class="row">
         <div class="col-md-2 entry-box" style="background-color: ">
             <ul class="nav nav-list">
-				<li class="nav-header">博文管理</li>
-				<li><a href="{{ url_for('admin.submitArticles') }}">发表博文</a></li>
-				<li><a href="{{ url_for('admin.manage_articles') }}">管理博文</a></li>
-				<li><a href="{{ url_for('admin.manage_articleTypes') }}">博文分类</a></li>
+                <li class="nav-header">案例管理</li>
+                <li><a href="{{ url_for('admin.submitArticles') }}">发表案例</a></li>
+                <li><a href="{{ url_for('admin.manage_articles') }}">管理案例</a></li>
+                <li><a href="{{ url_for('admin.manage_articleTypes') }}">案例分类</a></li>
 
-				<li class="nav-header">评论管理</li>
-				<li><a href="{{ url_for('admin.manage_comments') }}">博文评论</a></li>
+                <li class="nav-header">评论管理</li>
+                <li><a href="{{ url_for('admin.manage_comments') }}">案例评论</a></li>
 
-                <li class="nav-header">博客定制</li>
-				<li><a href="{{ url_for('admin.custom_blog_info') }}">基本信息</a></li>
-				<li><a href="{{ url_for('admin.custom_blog_plugin') }}">插件管理</a></li>
-				<li><a href="{{ url_for('admin.add_plugin') }}">添加插件</a></li>
-
-				<li class="nav-header">其它管理</li>
-				<li><a href="{{ url_for('admin.account') }}">用户账户</a></li>
-				<li><a href="{{ url_for('admin.help') }}">帮助</a></li>
-			</ul>
+                <!-- <li class="nav-header">博客定制</li>
+                    <li><a href="{{ url_for('admin.custom_blog_info') }}">基本信息</a></li>
+                    <li><a href="{{ url_for('admin.custom_blog_plugin') }}">插件管理</a></li>
+                    <li><a href="{{ url_for('admin.add_plugin') }}">添加插件</a></li>
+                   插件管理不晓得干嘛的，屏蔽了-->
+                <li class="nav-header">其它管理</li>
+                <li><a href="{{ url_for('admin.account') }}">用户账户</a></li>
+                <li><a href="{{ url_for('admin.help') }}">帮助</a></li>
+            </ul>
         </div>
         <div class="col-md-10">
             {% for category, message in get_flashed_messages(with_categories=true) %}

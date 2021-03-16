@@ -2,6 +2,7 @@
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 from app import create_app, db
+import sys
 from app.models import ArticleType, article_types, Source, \
     Comment, Article, User, Menu, ArticleTypeSetting, BlogInfo, \
     Plugin, BlogView
@@ -68,11 +69,12 @@ def deploy(deploy_type):
         Article.generate_fake(100)
         # step_4:generate random comments
         Comment.generate_fake(300)
-        # step_5:generate random replies
-        Comment.generate_fake_replies(100)
-        # step_4:generate random comments
+        # step_5:generate random repliesl
         Comment.generate_fake(300)
 
 
 if __name__ == '__main__':
+    if(len(sys.argv)<2):
+        sys.argv.append("runserver")
+   
     manager.run()

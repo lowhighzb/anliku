@@ -2,7 +2,7 @@
 {% import "_macros.html" as macros %}
 
 {% block title %}
-    Blog_mini -分类导航
+    全业务案例分享系统 -分类导航
 {% endblock %}
 
 {% block admin_content %}
@@ -12,7 +12,7 @@
     <p><span class="glyphicon glyphicon-bookmark"></span>导航总数：<span class="badge">{{ Menu.query.count() }}</span></p>
      <div class="articleTypes-nav-box">
         <ul class="nav nav-tabs">
-            <li class=""><a href="{{ url_for('admin.manage_articleTypes') }}">博文分类</a></li>
+            <li class=""><a href="{{ url_for('admin.manage_articleTypes') }}">案例分类</a></li>
             <li class="active"><a href="{{ url_for('admin.manage_articleTypes_nav') }}">分类导航</a></li>
         </ul>
         <div class="articleTypes-nav" id="articleTypesNav">

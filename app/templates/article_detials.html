@@ -2,7 +2,7 @@
 {% import '_macros.html' as macros %}
 
 {% block title %}
-    Blog_mini -{{ article.title }}
+    全业务案例分享系统 -{{ article.title }}
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
     <div class="article-add-info">
         <p>
             <span class="glyphicon glyphicon-time">
-                博文最后更新时间：
+                最后更新时间：
             </span>
             {{ moment(article.update_time.replace(microsecond=0)).format('LLL') }}
         </p>

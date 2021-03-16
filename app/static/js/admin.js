@@ -111,7 +111,7 @@ function get_articleType_info(url, id) {
         $('#editIntroduction').val(data.introduction);
         $('#editMenus').val(data.menu);
         $('#articleType_id').val(id);
-        $('#ModalTitle').text('修改博文分类：' + data.name);
+        $('#ModalTitle').text('修改案例分类：' + data.name);
         if (data.name == '未分类') {
             $('#editName').prop('readonly', true);
             $('#editIntroduction').prop('readonly', true);

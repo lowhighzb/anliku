@@ -3,17 +3,17 @@
   "defaults": {},
   "configurations": [
     {
-      "args": [ "help" ],
-      "env": {},
+      "type": "python",
       "interpreter": "(default)",
       "interpreterArguments": "",
-      "name": "manage.py",
+      "scriptArguments": "",
+      "env": { "PYTHONPATH":"${workspaceRoot}" },
       "nativeDebug": false,
+      "webBrowserUrl": "",
       "project": "manage.py",
       "projectTarget": "",
-      "scriptArguments": "",
-      "type": "python",
-      "webBrowserUrl": ""
+      "name": "manage.py"
+      
     }
   ]
 }

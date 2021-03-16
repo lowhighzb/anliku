@@ -2,17 +2,17 @@
 {% import "_macros.html" as macros %}
 
 {% block title %}
-    Blog_mini -博文分类
+    全业务案例分享系统 -案例分类
 {% endblock %}
 
 {% block admin_content %}
 <div class="entry-box manage-articleTypes">
-    <h4><strong>博文分类</strong></h4>
+    <h4><strong>案例分类</strong></h4>
     <hr/>
     <p><span class="glyphicon glyphicon-book"></span>分类总数：<span class="badge">{{ ArticleType.query.count() }}</span></p>
     <div class="articleTypes-box">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="{{ url_for('admin.manage_articleTypes') }}">博文分类</a></li>
+            <li class="active"><a href="{{ url_for('admin.manage_articleTypes') }}">案例分类</a></li>
             <li class=""><a href="{{ url_for('admin.manage_articleTypes_nav') }}">分类导航</a></li>
         </ul>
         <div class="articleTypes" id="articleTypes">
@@ -23,7 +23,7 @@
                     <th>分类介绍</th>
                     <th>属性</th>
                     <th>所属导航</th>
-                    <th>博文数量</th>
+                    <th>案例数量</th>
                     <th>修改</th>
                     <th>删除</th>
                 </tr>
@@ -94,7 +94,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">×</span></button>
-                <h4 class="modal-title">添加博文分类</h4>
+                <h4 class="modal-title">添加案例分类</h4>
             </div>
             <form id="addArticleTypeForm" method="post" action="">
                 <div class="modal-body">
@@ -164,7 +164,7 @@
             </div>
             <div class="modal-body">
                 <p>
-                    将该分类删除后不可恢复，同时会将该分类的所有博文设置为<strong>未分类</strong>，您确认要删除吗？
+                    将该分类删除后不可恢复，同时会将该分类的所有案例设置为<strong>未分类</strong>，您确认要删除吗？
                 </p>
             </div>
             <div class="modal-footer">
